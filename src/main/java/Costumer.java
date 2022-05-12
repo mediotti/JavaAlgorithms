@@ -1,6 +1,6 @@
 import UserInfo.CostumerInfo;
 import java.util.Scanner;
-public class main {
+public class Costumer {
     private static void costumerConstructor(){
         CostumerInfo costumer = new CostumerInfo();
         costumerFill(costumer);
