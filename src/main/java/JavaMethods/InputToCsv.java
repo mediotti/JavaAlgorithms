@@ -7,8 +7,6 @@ public class InputToCsv {
 
     public static void writer() throws IOException {
         String filePath = "/home/medzdev/teste-intellij/teste-intellij/src/main/resources/PersonInfo.csv";
-        String splitBy = ","; //Defining the delimiter, in .csv, the information is delimitted by comma (,).
-        String line = "";       //Starting this object.
         Integer option;
         BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
 
@@ -21,11 +19,15 @@ public class InputToCsv {
 
                 System.out.println("Deseja adicionar outro nome? (1) Sim | (2) Não: ");
                 option = terminalInput.nextInt();
-                    if(option == 1){
-                        writer.append(", ");
-                    }
-                //This will skip the /n kept after the enter.
-                terminalInput.nextLine();
+                    
+                switch(option){
+                
+                case 1: writer.append(", ");    //Defining the delimiter, in .csv, the information is delimitted by comma (,).
+                    break;
+                default: writer.append("\n");   //Adding a line break after de last name.
+                    break;
+            }
+                terminalInput.nextLine();   //This will skip the /n kept after the enter.
             } while (option == 1);
         }
 
