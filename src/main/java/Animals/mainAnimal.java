@@ -1,5 +1,5 @@
-import Animals.Dogs;
-import Animals.Fish;
+package Animals;
+
 import UserInfo.CostumerInfo;
 
 public class mainAnimal {

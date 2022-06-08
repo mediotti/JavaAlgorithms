@@ -1,3 +1,5 @@
+package Costumer;
+
 import UserInfo.CostumerInfo;
 import java.util.Scanner;
 public class Costumer {
